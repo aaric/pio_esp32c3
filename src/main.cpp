@@ -16,8 +16,7 @@ void setup() {
 void loop() {
     for (int j = 0; j < 255; j += 2) {
         for (int i = 0; i < LEDS_COUNT; i++) {
-            strip.setLedColorData(
-                i, strip.Wheel((i * 256 / LEDS_COUNT + j) & 255));
+            strip.setLedColorData(i, strip.Wheel((i * 256 / LEDS_COUNT + j) & 255));
         }
         strip.show();
         delay(10);
